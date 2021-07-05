@@ -1,0 +1,68 @@
+<meta charset = "utf-8">
+
+<h2>Agência DivulgaTudo</h2>
+
+Nome do anúncio:<br>
+<input type = "text" id = "campoNomeAnuncio"><br><br>
+Cliente<br>
+<input type = "text" id = "campoCliente"><br><br>
+Data de inicio:<br>
+<input type = "text" id = "campoDataInicio"><br><br>
+Data de término<br>
+<input type = "text" id = "campoDataTermino"><br><br>
+Investimento por dia:<br>
+<input type = "text" id = "campoInvestimentoDia"><br><br>
+
+<button onclick="criaFicha()">Enviar</button>
+
+<script src="js1/libNumero.js"></script>
+<script src="js1/mostra.js"></script>
+<script src="js1/libBrasil.js"></script>
+
+<script>
+    function calculaConta(investimentoDia, dataInicio, dataTermino){
+    return investimentoTotal= investimentoDia * (dataTermino - dataInicio)
+    }
+
+    function criaFicha(){
+
+        var nomeAnuncio = campoNomeAnuncio.value
+        var cliente = campoCliente.value
+        var dataInicio = campoDataInicio.value
+        var dataTermino = campoDataTermino.value
+        var investimentoDia = pegaNumero(campoInvestimentoDia.value)
+        
+        var investimentoTotal = calculaConta
+
+        mostra(`
+        <strong>Anuncio:</strong> ${nomeAnuncio}
+        <hr>
+        <strong>Cliente:</strong> ${cliente}
+        <hr>
+        <strong>Data de Inicio</strong> ${dataInicio}
+        <hr>
+        <strong>Data de Temino:</strong> ${dataTermino}
+        <hr>
+        <strong>Investimento por dia:</strong> R$ ${investimentoDia} reais
+        <hr>
+        <strong>Investimento Total:</strong> R$ ${parseFloat(investimentoTotal)}
+        
+        `)
+    }
+    
+
+
+
+
+
+        
+
+        
+
+
+
+    
+
+
+
+</script>

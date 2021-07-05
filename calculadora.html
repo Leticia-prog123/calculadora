@@ -1,0 +1,42 @@
+<h2>Agência DivulgaTudo</h2>
+
+
+<script>
+var valorInvestido = parseFloat(prompt("Digite o valor que será investido:").replace(".","."))
+console.log(valorInvestido)
+
+var totalVisualizacoes = valorInvestido * 30
+var visualiza = 100
+var clique = 12
+
+/* 1 pessoa compartilha e gera 40 visualizações
+    2 pessoa compartilha e gera 40 visualizações
+    3 pessoa compartilha e gera 40 visualizações
+    4 pessoa compartilha e gera 40 visualizações
+
+    30 visualizações (original ) a cada 1,00
+
+    a cada 100 pessoas que visualizam 12 clicam
+    a cada 20 cliques 3 compartilham
+    a cada compartilhamento 40 novas visualizações
+
+    anuncio compartilhado no maximo 4 vezes em sequencia
+
+    calculo: maximo de visualizações por investimento (valor investido pelo usuario x 30)
+             maximo de visualização original e compartilhamento 
+    usuario definira o investimento a ser feito*/
+
+    document.write(`
+        Total investido: R$ ${valorInvestido.toFixed(2).replace(".",",")} reais
+        <br>
+        Total de visualizações por Investimento: ${totalVisualizacoes} visualizações
+        <br>
+        
+
+
+
+
+    
+        `)
+
+</script>
